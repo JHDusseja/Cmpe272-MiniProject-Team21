@@ -1,0 +1,13 @@
+applications:
+- path: .
+  memory: 512M
+  instances: 1
+  domain: mybluemix.net
+  name: miniprojectteam21
+  host: miniprojectteam21
+  disk_quota: 1024M
+  services:
+  - miniprojectteam21-cloudantNoSQLDB
+  - SQL Database-yu
+  - Text to Speech-oo
+  command: node --max-old-space-size=384 node_modules/node-red/red.js --settings ./bluemix-settings.js -v
